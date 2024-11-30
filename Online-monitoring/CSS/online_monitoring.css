@@ -246,7 +246,7 @@ button {
   
   /* Text Hover Effect */
   button:hover span {
-    color: #e0aaff; /* Light purple text on hover */
+    color: #ffffff; /* Light purple text on hover */
     transition: 0.3s;
   }
   
