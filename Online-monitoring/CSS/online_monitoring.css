@@ -345,3 +345,84 @@ body {
         background-attachment: fixed; /* Ensures no scrolling artifacts */
     }
 }
+
+
+/* Scrolling Animation Container */
+.scrolling-animation {
+    position: relative;
+    overflow: hidden;
+    background-color: #fdf2fa;
+    height: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid #ddd;
+    padding: 5px; /* Add padding for better appearance */
+}
+
+/* Scrolling Text */
+.scrolling-animation p {
+    position: absolute;
+    white-space: nowrap;
+    animation: scroll-right-left 10s linear infinite;
+    font-size: 16px; /* Adjusted for better visibility on smaller screens */
+    color: red;
+    font-weight: bold;
+    margin: 0;
+}
+
+/* Keyframes for scrolling animation */
+@keyframes scroll-right-left {
+    0% {
+        transform: translateX(100%);
+    }
+    100% {
+        transform: translateX(-100%);
+    }
+}
+
+/* Page Title Styling for Responsiveness */
+.page-title {
+    position: relative;
+    margin: 0;
+    height: auto; /* Allow the height to adjust automatically */
+    padding: 10px 15px; /* Add padding for better spacing */
+    font-size: 28px; /* Reduced font size for mobile */
+    text-align: center;
+    background-color: #ff4f89;
+    color: white;
+    z-index: 999;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    animation: bounceAndGlow 2s ease-in-out infinite, colorShift 5s linear infinite;
+}
+
+/* Mobile Adjustments */
+@media (max-width: 768px) {
+    .scrolling-animation {
+        height: 40px; /* Adjust height for mobile */
+    }
+    
+    .scrolling-animation p {
+        font-size: 14px; /* Smaller font for mobile screens */
+    }
+    
+    .page-title {
+        font-size: 22px; /* Further reduce font size for smaller screens */
+        padding: 10px; /* Adjust padding to fit the screen */
+    }
+}
+
+@media (max-width: 480px) {
+    .scrolling-animation {
+        height: 35px; /* Compact height for very small screens */
+    }
+    
+    .scrolling-animation p {
+        font-size: 12px; /* Compact font size */
+    }
+    
+    .page-title {
+        font-size: 20px; /* Further reduction for ultra-small screens */
+        padding: 8px; /* Adjust padding */
+    }
+}
