@@ -292,7 +292,7 @@ button {
   
   @media (max-width: 768px) {
     .page-title {
-        font-size: 20px; /* Ensure the font size is manageable on mobile */
+        font-size: 23px; /* Ensure the font size is manageable on mobile */
         padding: 15px; /* Adjust padding to fit the screen */
         margin-top: 0; /* Remove the top margin to position the title properly */
     }
