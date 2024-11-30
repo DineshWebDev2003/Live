@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Forgot Password - TNHappyKids</title>
+    <link rel="stylesheet" href="/Online-monitoring/CSS/online_monitoring.css"> <!-- Link to your existing CSS -->
+    <script>
+        // Function to toggle the mobile menu
+        function toggleMenu() {
+            var menu = document.getElementById('mobileMenu');
+            menu.classList.toggle('active');
+        }
+    </script>
+</head>
+<body>
+
+    <!-- Navigation Bar -->
+    <div class="navbar">
+        <a href="/index.html">Attendance</a>
+        <a href="/Camera_Access/cameralogin.html" class="active">Online Monitoring</a>
+        <a href="/Student_identification/Index_QR.html">Student Identification</a>
+
+        <!-- Hamburger Icon -->
+        <div class="hamburger" onclick="toggleMenu()">
+            <div class="bar"></div>
+            <div class="bar"></div>
+            <div class="bar"></div>
+        </div>
+    </div>
+
+    <!-- Mobile Menu -->
+    <div class="mobile-menu" id="mobileMenu">
+        <a href="/index.html">Attendance</a>
+        <a href="/Camera_Access/cameralogin.html">Online Monitoring</a>
+        <a href="/Student_identification/Index_QR.html">Student Identification</a>
+    </div>
+
+    <!-- Forgot Password Page Content -->
+    <div class="container">
+        <h2 class="page-title">Forgot Password</h2>
+        <p class="message">Please contact our <strong>TNHappyKids branch</strong> for assistance with resetting your password.</p>
+    </div>
+
+    <!-- Footer -->
+    <div class="footer">
+        <p>© 2024 TNHappyKids. All Rights Reserved.</p>
+        <p><a href="https://www.tnhappykids.com">Visit our website</a> | <a href="mailto:support@tnhappykids.com">Contact Support</a></p>
+    </div>
+
+</body>
+</html>

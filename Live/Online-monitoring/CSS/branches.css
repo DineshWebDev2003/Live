@@ -1,0 +1,240 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('/Online-monitoring/Images/bg branch.jpg'); /* Add background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background with transparency for readability */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Header Styling */
+h1.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff; /* Bright color for the title */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background-color: #F31082; /* Background color for title */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Stream Container Styling */
+.stream-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 30px;
+}
+
+iframe {
+    width: 100%;
+    max-width: 800px;
+    height: 450px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+/* Information Message Styling */
+.message {
+    text-align: center;
+    font-size: 18px;
+    color: #555;
+    margin-top: 20px;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f31082;
+    color: white;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.page-title {
+        font-size: 28px;
+        padding: 8px; /* Slightly smaller padding for mobile */
+    }
+
+    .message {
+        font-size: 16px;
+    }
+
+    iframe {
+        height: 300px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    /* Ensure proper alignment for smaller screens */
+    .stream-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+}
+
+/* Add Mobile Menu styles (optional, in case you want a menu) */
+#mobileMenu {
+    display: none;
+}
+
+#mobileMenu.active {
+    display: block;
+    background-color: rgba(0, 0, 0, 0.8);
+    position: absolute;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    padding: 20px;
+    color: white;
+}
+/* Feedback Section Styling */
+#feedbackSection {
+    margin-top: 30px;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.9); /* Slight white background */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Feedback Form Container */
+.feedback-form-container {
+    width: 80%;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: rgba(255, 255, 255, 0.8);
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-form-container h2 {
+    text-align: center;
+    font-size: 24px;
+    color: #f734cc;
+    margin-bottom: 15px;
+}
+
+/* Form Elements Styling */
+.feedback-form-container form {
+    display: flex;
+    flex-direction: column;
+}
+
+.feedback-form-container form label {
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.feedback-form-container form input, 
+.feedback-form-container form textarea {
+    padding: 10px;
+    margin-bottom: 15px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    color: #333;
+}
+
+/* Submit Button Styling */
+.feedback-form-container form button {
+    padding: 12px;
+    background-color: #f734cc;
+    color: white;
+    font-size: 16px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+}
+
+.feedback-form-container form button:hover {
+    background-color: #151ab0; /* Darker shade on hover */
+}
+
+/* Success or Error Message */
+.feedback-form-container .response-message {
+    text-align: center;
+    font-size: 16px;
+    color: green;
+    margin-top: 20px;
+}
+
+/* Feedback Item Styling (for displaying submitted feedback) */
+.feedback-item {
+    background-color: #f9f9f9;
+    padding: 15px;
+    margin-bottom: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
+}
+
+.feedback-item strong {
+    font-size: 18px;
+    color: #1f23f0;
+}
+
+.feedback-item p {
+    font-size: 16px;
+    color: #333;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    .feedback-form-container {
+        width: 90%; /* Make the form take up more space on smaller screens */
+    }
+
+    .feedback-form-container h2 {
+        font-size: 20px;
+    }
+
+    .feedback-item {
+        font-size: 14px;
+    }
+}
