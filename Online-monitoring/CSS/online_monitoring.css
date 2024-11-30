@@ -319,95 +319,29 @@ button {
 
 
 
-/* Responsive Design for Small Devices (max-width: 480px) */
-@media (max-width: 480px) {
-    /* Adjust title font size and spacing for smaller screens */
-    .page-title {
-        font-size: 18px; /* Smaller font for narrow screens */
-        padding: 10px; /* Reduce padding for a compact look */
-    }
-
-    .container {
-        margin-top: 30px; /* Reduce margin for better spacing */
-    }
-
-    .login-box {
-        padding: 20px; /* Compact padding for smaller screens */
-        width: 90%; /* Ensure it fits within the viewport */
-    }
-
-    .login-box h2 {
-        font-size: 20px; /* Adjust title size */
-    }
-
-    .login-box input[type="text"],
-    .login-box input[type="password"],
-    .login-box input[type="submit"] {
-        font-size: 14px; /* Smaller font for input fields */
-        padding: 12px; /* Adjust padding for better usability */
-    }
-
-    .footer {
-        font-size: 10px; /* Reduce footer font size */
-    }
-
-    button {
-        width: 90px; /* Smaller button width */
-        height: 30px; /* Smaller button height */
-        margin-left: 0; /* Center-align button */
-    }
-
-    button span {
-        font-size: 14px; /* Adjust text size for buttons */
-    }
-
-    .scrolling-animation p {
-        font-size: 14px; /* Reduce scrolling text size */
-    }
-}
-
-/* Responsive Design for Tablets (max-width: 768px) */
-@media (max-width: 768px) {
-    .page-title {
-        font-size: 24px;
-        padding: 15px;
-        margin-top: 0; /* Remove the top margin to fit better */
-    }
-
-    .container {
-        margin-top: 50px; /* Ensure proper spacing for tablets */
-    }
-
-    .login-box {
-        padding: 25px;
-        width: 90%; /* Constrain the width to fit the screen */
-    }
-
-    .login-box input[type="text"],
-    .login-box input[type="password"],
-    .login-box input[type="submit"] {
-        font-size: 16px; /* Maintain a comfortable input field size */
-    }
-
-    .footer {
-        font-size: 12px; /* Adjust footer font size for tablets */
-    }
-
-    button {
-        width: 100px; /* Slightly smaller button size */
-        height: 35px;
-    }
-
-    button span {
-        font-size: 16px; /* Adjust button text size */
-    }
-
-    .scrolling-animation p {
-        font-size: 16px; /* Maintain readability of scrolling text */
-    }
-}
-
-/* Ensure images and background fit for all screens */
+/* Ensure full background image visibility */
 body {
-    background-size: cover !important; /* Force background to cover all screen sizes */
+    margin: 0;
+    padding: 0;
+    font-family: Arial, sans-serif;
+    background: url('/Online-monitoring/Images/bg.jpg') no-repeat center center fixed;
+    background-size: cover; /* Ensures the image covers the entire screen */
+    background-attachment: fixed; /* Ensures the image doesn't move while scrolling */
+    background-position: center; /* Centers the image on all screen sizes */
+}
+
+/* Fix for smaller mobile devices */
+@media (max-width: 480px) {
+    body {
+        background-size: 100% 100%; /* Stretches the background to fit the screen */
+        background-attachment: scroll; /* Allows proper scaling on smaller devices */
+    }
+}
+
+/* Fix for tablets */
+@media (max-width: 768px) {
+    body {
+        background-size: cover; /* Keeps the background proportional on tablets */
+        background-attachment: fixed; /* Ensures no scrolling artifacts */
+    }
 }
