@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Online Monitoring</title>
+    <link rel="stylesheet" href="/Online-monitoring/CSS/branches.css">
+    <style>
+        .success-message {
+            display: none;
+            margin-top: 20px;
+            padding: 10px;
+            border: 1px solid #4caf50;
+            background-color: #d4edda;
+            color: #155724;
+            border-radius: 5px;
+            text-align: center;
+        }
+    </style>
+</head>
+<body>
+
+    <!-- Monitoring Stream -->
+    <h1 class="page-title">Online Monitoring - Kolathur</h1>
+    <div class="stream-container">
+        <iframe
+            src="https://player.twitch.tv/?channel=tnhappykids_kolathur&parent=attendance.tnhappykids.in"
+            allowfullscreen>
+        </iframe>
+    </div>
+
+    <!-- Feedback Form -->
+    <section id="feedbackSection">
+        <div class="feedback-form-container">
+            <h2>Submit Your Feedback</h2>
+            <form id="feedbackForm">
+                <!-- Name -->
+                <label for="name">Your Name:</label>
+                <input type="text" id="name" name="name" required>
+
+                <!-- Email -->
+                <label for="email">Your Email:</label>
+                <input type="email" id="email" name="email" required>
+
+                <!-- Feedback -->
+                <label for="message">Your Feedback:</label>
+                <textarea id="message" name="message" rows="4" required></textarea>
+
+                <!-- Submit Button -->
+                <button type="submit">Submit Feedback</button>
+            </form>
+
+            <!-- Success Message -->
+            <div class="success-message" id="successMessage">
+                Feedback Submitted Successfully! Thank you for your response.
+            </div>
+        </div>
+    </section>
+
+    <script>
+        // Handle form submission
+        document.getElementById('feedbackForm').addEventListener('submit', function (event) {
+            event.preventDefault(); // Prevent default form submission
+
+            // Capture form data (if needed for further use or storage)
+            const name = document.getElementById('name').value;
+            const email = document.getElementById('email').value;
+            const message = document.getElementById('message').value;
+
+            // Display the success message
+            const successMessage = document.getElementById('successMessage');
+            successMessage.style.display = 'block';
+
+            // Clear the form fields
+            document.getElementById('feedbackForm').reset();
+
+            // Optional: Log feedback in console or send it to the server
+            console.log("Feedback Submitted:", { name, email, message });
+        });
+    </script>
+</body>
+</html>
