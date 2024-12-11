@@ -16,8 +16,8 @@ const loginData = {
             { username: "KR011", password: "pass11ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
             { username: "KR012", password: "pass12ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
             { username: "KR013", password: "pass13ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
-          //  { username: "KR014", password: "pass14ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
-          //  { username: "KR015", password: "pass15ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
+            { username: "KR014", password: "pass14ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
+            { username: "KR015", password: "pass15ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
             
         ],
     },
