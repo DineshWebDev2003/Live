@@ -188,3 +188,49 @@ button:hover {
         padding: 10px;
     }
 }
+
+/* From Uiverse.io by vikiWayne */ 
+.button {
+    padding: 5px ;  /* Reduced padding for a more compact left-right size */
+    border: 2px solid #ff4f89;  /* Border with rose color */
+    border-radius: 5px;
+    font-weight: bold;
+    letter-spacing: 2px;  /* Slight letter-spacing */
+    text-transform: uppercase;
+    cursor: pointer;
+    color: #ff4f89;  /* Rose color for text before hover */
+    background-color: transparent;  /* Transparent background */
+    transition: all 1000ms;
+    font-size: 14px;  /* Font size adjustment */
+    position: relative;
+    overflow: hidden;
+    outline: none;
+    margin-top: 10px;
+    width: 150px;
+    margin-left: 100px;
+}
+
+.button:hover {
+    color: #ffffff;  /* Text turns white on hover */
+    transform: scale(1.1);  /* Slight scale-up effect */
+    outline: 2px solid #ff70a6;  /* Lighter outline on hover */
+    box-shadow: 4px 5px 17px -4px #e0437b;  /* Shadow effect on hover */
+    background-color: #ff4f89;  /* Background becomes rose color on hover */
+}
+
+.button::before {
+    content: "";
+    position: absolute;
+    left: -50px;
+    top: 0;
+    width: 0;
+    height: 100%;
+    background-color: #ff4f89;  /* Rose background color on hover */
+    transform: skewX(45deg);
+    z-index: -1;
+    transition: width 1000ms;
+}
+
+.button:hover::before {
+    width: 250%;  /* Expanding background effect on hover */
+}
