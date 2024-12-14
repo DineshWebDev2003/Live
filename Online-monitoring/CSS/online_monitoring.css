@@ -1,428 +1,190 @@
-/* Add background image to the page */
-body {
+/* General Reset */
+* {
     margin: 0;
     padding: 0;
-    font-family: Arial, sans-serif;
-    background: #f0f0f0 url('/Online-monitoring/Images/bg.jpg') center/cover no-repeat;
-    background-size: cover; /* Ensure the image covers the entire screen */
-    background-position: center;
-    background-repeat: no-repeat; /* Avoid repeating the background */
+    box-sizing: border-box;
 }
 
-
-/* Title Styling */
-.page-title {
-    background-color: #ff4f89;
-    color: white;
-    text-align: center;
-    font-size: 36px;
-    padding: 20px;
-    margin-top: 90px; /* Make space for scrolling container */
-    
-
+/* Body and Background */
+body {
+    font-family: 'Roboto', Arial, sans-serif;
+    background: url('/Online-monitoring/Images/bg.jpg') center center fixed;
+    background-size: cover;
+    color: #333;
 }
 
-/* Page Title Styling (Fixed Below the Animation) */
-/* Page Title Styling with Enhanced Animation */
-.page-title {
-    position: relative;
-    top: 0;
-    margin: 0;
+/* Scrolling Animation */
+.scrolling-animation {
+    background-color: #fdf2fa;
+    color: red;
+    font-weight: bold;
+    font-size: 16px;
+    overflow: hidden;
     height: 50px;
-    line-height: 50px;
-    background-color: #ff4f89; /* Background color for title */
-    color: white; /* Title text color */
-    font-size: 35px; /* Adjust font size */
-    text-align: center; /* Center the text */
-    z-index: 999; /* Ensure it's visible above other content */
-    font-family: 'Comic Sans MS', cursive, sans-serif; /* Fun and playful font */
-    animation: bounceAndGlow 2s ease-in-out infinite, colorShift 5s linear infinite, rotate 4s linear infinite; /* Multiple animations */
-  }
-  
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
 
-  
-  /* Color Shifting Animation */
-  @keyframes colorShift {
-    0% {
-      color: #ff4f89; /* Initial pink color */
-    }
-    25% {
-      color: #ffbb00; /* Yellow color */
-    }
-    50% {
-      color: #00bfff; /* Sky blue color */
-    }
-    75% {
-      color: #32cd32; /* Lime green color */
-    }
-    100% {
-      color: #ff4f89; /* Return to original pink */
-    }
-  }
-  
+.scrolling-animation p {
+    white-space: nowrap;
+    animation: scroll-right-left 10s linear infinite;
+}
 
-  
+@keyframes scroll-right-left {
+    0% { transform: translateX(100%); }
+    100% { transform: translateX(-100%); }
+}
+
+/* Page Title */
+.page-title {
+    text-align: center;
+    font-size: 32px;
+    padding: 15px;
+    color: white;
+    background-color: #ff4f89;
+    font-family: 'Comic Sans MS', cursive, sans-serif;
+    animation: colorShift 5s linear infinite;
+}
+
+@keyframes colorShift {
+    0%, 100% { color: #ff4f89; }
+    25% { color: #ffbb00; }
+    50% { color: #00bfff; }
+    75% { color: #32cd32; }
+}
+
 /* Login Form Container */
 .container {
-    display: block;
-    width: 100%;
+    width: 90%;
     max-width: 450px;
-    margin: 0 auto;
+    margin: 80px auto 20px auto;
     padding: 20px;
-    margin-top: 80px; /* Add some margin from top */
 }
 
-/* Login Box Styling */
 .login-box {
-    width: 100%;
-    background: white;
-    padding: 40px;
-    border-radius: 15px;
-    box-shadow: rgba(0, 0, 0, 0.1) 0px 10px 30px;
-    text-align: start;
-    box-sizing: border-box;
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth animation */
+    background-color: white;
+    padding: 30px;
+    border-radius: 10px;
+    box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s, box-shadow 0.3s;
 }
 
 .login-box:hover {
-    transform: scale(1.05); /* Zoom in slightly */
-    box-shadow: rgba(0, 0, 0, 0.2) 0px 15px 40px; /* Enhance shadow for effect */
+    transform: scale(1.05);
+    box-shadow: 0 15px 40px rgba(0, 0, 0, 0.2);
 }
 
 .login-box h2 {
-    margin-bottom: 20px;
-    font-size: 24px;
-    font-weight: 600;
-    color: #333;
     text-align: center;
+    color: #333;
+    margin-bottom: 20px;
 }
 
-/* Input Fields */
-.login-box input[type="text"],
-.login-box input[type="password"] {
+.login-box input {
     width: 100%;
-    padding: 14px;
+    padding: 12px;
+    margin-bottom: 20px;
     border: 2px solid #ddd;
     border-radius: 5px;
     font-size: 16px;
-    margin-bottom: 35px;
     transition: border-color 0.3s ease;
 }
 
-.login-box input[type="text"]:focus,
-.login-box input[type="password"]:focus {
-    border-color: #FF4F89;
+.login-box input:focus {
+    border-color: #ff4f89;
     outline: none;
 }
 
 /* Submit Button */
-.login-box input[type="submit"] {
-    background-color: #FF4F89;
-    color: white;
-    padding: 14px;
+button {
+    display: block;
     width: 100%;
+    padding: 12px;
     border: none;
     border-radius: 5px;
-    margin-top: 20px;
-    font-size: 16px;
+    background-color: #ff4f89;
+    color: white;
+    font-size: 18px;
     cursor: pointer;
     transition: background-color 0.3s ease;
 }
 
-.login-box input[type="submit"]:hover {
-    background-color: #FF4F89;
+button:hover {
+    background-color: #e0437b;
 }
 
-/* Forgot Password Link */
+/* Forgot Password */
 .forgot-password {
-    margin-top: 15px;
+    text-align: center;
+    margin-top: 10px;
 }
 
 .forgot-password a {
-    font-size: 14px;
-    color: #FF4F89;
+    color: #ff4f89;
     text-decoration: none;
-    transition: color 0.3s ease;
+    font-size: 14px;
 }
 
 .forgot-password a:hover {
-    color: #FF4F89;
+    text-decoration: underline;
 }
 
 /* Footer */
 .footer {
     text-align: center;
-    font-size: 14px;
     color: #ff6a00;
-    margin-top: 40px;
+    font-size: 14px;
+    margin: 20px 0;
 }
 
 .footer a {
+    color: #ff4f89;
     text-decoration: none;
-    color: #FF4F89;
 }
 
 .footer a:hover {
     text-decoration: underline;
 }
 
-/* Responsive Design for Mobile Screens */
+/* Responsive Adjustments */
 @media (max-width: 768px) {
-    
-
-
     .page-title {
         font-size: 24px;
-        padding: 15px;
-        margin-top: 90px; /* Adjust top margin */
+        padding: 10px;
     }
 
     .container {
-        margin-top: 100px; /* Space out the login box */
+        margin-top: 50px;
     }
 
     .login-box {
-        padding: 25px;
-        width: 90%;
+        padding: 20px;
     }
 
-    .login-box input[type="text"],
-    .login-box input[type="password"],
-    .login-box input[type="submit"] {
+    button {
         font-size: 16px;
-    }
-
-    .footer {
-        font-size: 12px;
-    }
-
-}
-
-/* Uiverse-style Button */
-button {
-    display: inline-block;
-    width: 110px;
-    height: 35px;
-    border-radius: 10px;
-    border: 1px solid #03045e; /* Dark border color */
-    position: relative;
-    margin-left: 130px;
-    overflow: hidden;
-    transition: all 0.5s ease-in; /* Smooth animation */
-    z-index: 1; /* Ensure proper layering */
-    background: none; /* Transparent background */
-    cursor: pointer; /* Pointer cursor for interactivity */
-  }
-  
-  /* Background Layers */
-  button::before,
-  button::after {
-    content: '';
-    position: absolute;
-    top: 0;
-    width: 0; /* Initially hidden */
-    height: 100%; /* Full height */
-    transform: skew(15deg); /* Skew effect */
-    transition: all 0.5s; /* Smooth transition */
-    overflow: hidden;
-    z-index: -1; /* Behind the text */
-  }
-  
-  button::before {
-    left: -10px; /* Start position */
-    background: #ff0291; /* First layer color */
-  }
-  
-  button::after {
-    right: -10px; /* Start position */
-    background: #0c94e8; /* Second layer color */
-  }
-  
-  /* Hover Effect */
-  button:hover::before,
-  button:hover::after {
-    width: 58%; /* Reveal background layers */
-  }
-  
-  /* Text Hover Effect */
-  button:hover span {
-    color: #ffffff; /* Light purple text on hover */
-    transition: 0.3s;
-  }
-  
-  /* Button Text */
-  button span {
-    color: #03045e; /* Initial dark text color */
-    font-size: 18px; /* Font size for readability */
-    transition: all 0.3s ease-in; /* Smooth color change */
-  }
-  
-/* Scrolling Animation Container */
-.scrolling-animation {
-    position: relative;
-    overflow: hidden; /* Hides text outside the container */
-    background-color: #fdf2fa; /* Light background */
-    height: 50px; /* Adjust height for container */
-    display: flex; /* Use flexbox for centering */
-    align-items: center; /* Center content vertically */
-    justify-content: center; /* Center content horizontally */
-    border: 1px solid #ddd; /* Optional border for clarity */
-  }
-  
-  /* Scrolling Text */
-  .scrolling-animation p {
-    position: absolute;
-    white-space: nowrap; /* Keeps text in a single line */
-    animation: scroll-right-left 10s linear infinite; /* Continuous right-to-left scrolling */
-    font-size: 18px; /* Text size */
-    color: red; /* Text color */
-    font-weight: bold; /* Bold text for emphasis */
-    margin: 0; /* Remove default paragraph margin */ 
-  }
-  
-  /* Keyframes for scrolling animation */
-  @keyframes scroll-right-left {
-    0% {
-      transform: translateX(100%); /* Start completely off-screen to the right */
-    }
-    100% {
-      transform: translateX(-100%); /* Move completely off-screen to the left */
-    }
-  }
-  
-  @media (max-width: 768px) {
-    .page-title {
-        font-size: 23px; /* Ensure the font size is manageable on mobile */
-        padding: 15px; /* Adjust padding to fit the screen */
-        margin-top: 0; /* Remove the top margin to position the title properly */
-    }
-
-    .container {
-        margin-top: 50px; /* Ensure some spacing for better aesthetics */
-    }
-
-    .login-box {
-        padding: 25px;
-        width: 90%;
-    }
-
-    .login-box input[type="text"],
-    .login-box input[type="password"],
-    .login-box input[type="submit"] {
-        font-size: 16px;
-    }
-
-    .footer {
-        font-size: 12px;
-    }
-}
-
-
-
-/* Ensure full background image visibility */
-body {
-    margin: 0;
-    padding: 0;
-    font-family: Arial, sans-serif;
-    background: url('/Online-monitoring/Images/bg.jpg') no-repeat center center fixed;
-    background-size: cover; /* Ensures the image covers the entire screen */
-    background-attachment: fixed; /* Ensures the image doesn't move while scrolling */
-    background-position: center; /* Centers the image on all screen sizes */
-}
-
-/* Fix for smaller mobile devices */
-@media (max-width: 480px) {
-    body {
-        background-size: 100% 100%; /* Stretches the background to fit the screen */
-        background-attachment: scroll; /* Allows proper scaling on smaller devices */
-    }
-}
-
-/* Fix for tablets */
-@media (max-width: 768px) {
-    body {
-        background-size: cover; /* Keeps the background proportional on tablets */
-        background-attachment: fixed; /* Ensures no scrolling artifacts */
-    }
-}
-
-
-/* Scrolling Animation Container */
-.scrolling-animation {
-    position: relative;
-    overflow: hidden;
-    background-color: #fdf2fa;
-    height: 50px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: 1px solid #ddd;
-    padding: 5px; /* Add padding for better appearance */
-}
-
-/* Scrolling Text */
-.scrolling-animation p {
-    position: absolute;
-    white-space: nowrap;
-    animation: scroll-right-left 10s linear infinite;
-    font-size: 16px; /* Adjusted for better visibility on smaller screens */
-    color: red;
-    font-weight: bold;
-    margin: 0;
-}
-
-/* Keyframes for scrolling animation */
-@keyframes scroll-right-left {
-    0% {
-        transform: translateX(100%);
-    }
-    100% {
-        transform: translateX(-100%);
-    }
-}
-
-/* Page Title Styling for Responsiveness */
-.page-title {
-    position: relative;
-    margin: 0;
-    height: auto; /* Allow the height to adjust automatically */
-    padding: 10px 15px; /* Add padding for better spacing */
-    font-size: 28px; /* Reduced font size for mobile */
-    text-align: center;
-    background-color: #ff4f89;
-    color: white;
-    z-index: 999;
-    font-family: 'Comic Sans MS', cursive, sans-serif;
-    animation: bounceAndGlow 2s ease-in-out infinite, colorShift 5s linear infinite;
-}
-
-/* Mobile Adjustments */
-@media (max-width: 768px) {
-    .scrolling-animation {
-        height: 40px; /* Adjust height for mobile */
-    }
-    
-    .scrolling-animation p {
-        font-size: 14px; /* Smaller font for mobile screens */
-    }
-    
-    .page-title {
-        font-size: 22px; /* Further reduce font size for smaller screens */
-        padding: 10px; /* Adjust padding to fit the screen */
     }
 }
 
 @media (max-width: 480px) {
-    .scrolling-animation {
-        height: 35px; /* Compact height for very small screens */
-    }
-    
-    .scrolling-animation p {
-        font-size: 12px; /* Compact font size */
-    }
-    
     .page-title {
-        font-size: 20px; /* Further reduction for ultra-small screens */
-        padding: 8px; /* Adjust padding */
+        font-size: 20px;
+        padding: 8px;
+    }
+
+    .scrolling-animation {
+        height: 40px;
+        font-size: 14px;
+    }
+
+    .login-box input {
+        font-size: 14px;
+        padding: 10px;
+    }
+
+    button {
+        font-size: 14px;
+        padding: 10px;
     }
 }
