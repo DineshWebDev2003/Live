@@ -189,33 +189,34 @@ button:hover {
     }
 }
 
-/* From Uiverse.io by vikiWayne */ 
+/* Button Styling */
 .button {
-    padding: 5px ;  /* Reduced padding for a more compact left-right size */
-    border: 2px solid #ff4f89;  /* Border with rose color */
+    padding: 5px;
+    border: 2px solid #ff4f89;
     border-radius: 5px;
     font-weight: bold;
-    letter-spacing: 2px;  /* Slight letter-spacing */
+    letter-spacing: 2px;
     text-transform: uppercase;
     cursor: pointer;
-    color: #ff4f89;  /* Rose color for text before hover */
-    background-color: transparent;  /* Transparent background */
+    color: #ff4f89;
+    background-color: transparent;
     transition: all 1000ms;
-    font-size: 14px;  /* Font size adjustment */
+    font-size: 14px;
     position: relative;
     overflow: hidden;
     outline: none;
     margin-top: 10px;
-    width: 150px;
-    margin-left: 100px;
+    width: 100%;
+    max-width: 150px;
+    margin: 10px auto;
 }
 
 .button:hover {
-    color: #ffffff;  /* Text turns white on hover */
-    transform: scale(1.1);  /* Slight scale-up effect */
-    outline: 2px solid #ff70a6;  /* Lighter outline on hover */
-    box-shadow: 4px 5px 17px -4px #e0437b;  /* Shadow effect on hover */
-    background-color: #ff4f89;  /* Background becomes rose color on hover */
+    color: #ffffff;
+    transform: scale(1.1);
+    outline: 2px solid #ff70a6;
+    box-shadow: 4px 5px 17px -4px #e0437b;
+    background-color: #ff4f89;
 }
 
 .button::before {
@@ -225,12 +226,12 @@ button:hover {
     top: 0;
     width: 0;
     height: 100%;
-    background-color: #ff4f89;  /* Rose background color on hover */
+    background-color: #ff4f89;
     transform: skewX(45deg);
     z-index: -1;
     transition: width 1000ms;
 }
 
 .button:hover::before {
-    width: 250%;  /* Expanding background effect on hover */
+    width: 250%;
 }
