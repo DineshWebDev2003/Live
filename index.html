@@ -33,16 +33,26 @@
                     maxlength="20"
                 >
 
-                <!-- Password Input -->
-                <label for="onlineMonitoringPassword" style="position: relative; top: -08px;"><b>Password </b></label>
-                <input 
-                    type="password" 
-                    id="onlineMonitoringPassword" 
-                    name="password" 
-                    placeholder="Enter your password" 
-                    required 
-                    maxlength="20"
-                >
+                  <!-- Password Input -->
+                     <label for="onlineMonitoringPassword" style="position: relative; top: -08px;"><b>Password</b></label>
+                     <div style="position: relative; display: flex; align-items: center;">
+                     <input 
+                        type="password" 
+                        id="onlineMonitoringPassword" 
+                        name="password" 
+                        placeholder="Enter your password" 
+                         required 
+                         maxlength="20"
+                        style="flex: 1; padding-right: 40px;"
+                         >
+                         <span 
+                           id="togglePassword" 
+                           style="position: absolute; right: 10px; cursor: pointer; font-size: 18px; color: #555;"
+                            >
+                           👁️
+                           </span>
+                          </div>
+
 
                 <!-- Message for Success/Error -->
                 <div id="inputMessage"></div>
