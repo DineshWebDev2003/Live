@@ -6,6 +6,32 @@
     <title>Online Monitoring Login - TN Happy Kids</title>
     <link rel="stylesheet" href="/Online-monitoring/CSS/online_monitoring.css"> <!-- External CSS File -->
     <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;600&display=swap" rel="stylesheet">
+    <style>
+        /* Inline styling for eye icon */
+        .password-container {
+            position: relative;
+            display: flex;
+            align-items: center;
+        }
+
+        .password-container input {
+            flex: 1;
+            padding-right: 40px;
+        }
+
+        .password-container .toggle-password {
+            position: absolute;
+            right: 10px;
+            cursor: pointer;
+            font-size: 18px;
+            color: #555;
+            margin-top: -20px;
+        }
+
+        .toggle-password:hover {
+            color: #ff4f89;
+        }
+    </style>
 </head>
 <body>
     <!-- Scrolling Animation -->
@@ -33,8 +59,19 @@
                     maxlength="20"
                 >
 
-                 <!-- Password Input --> <label for="onlineMonitoringPassword" style="position: relative; top: -08px;"><b>Password </b></label> <input type="password" id="onlineMonitoringPassword" name="password" placeholder="Enter your password" required maxlength="20" >
-
+                <!-- Password Input -->
+                <label for="onlineMonitoringPassword" style="position: relative; top: -08px;"><b>Password</b></label>
+                <div class="password-container">
+                    <input 
+                        type="password" 
+                        id="onlineMonitoringPassword" 
+                        name="password" 
+                        placeholder="Enter your password" 
+                        required 
+                        maxlength="20"
+                    >
+                    <span class="toggle-password" id="togglePassword">👁️</span>
+                </div>
 
                 <!-- Message for Success/Error -->
                 <div id="inputMessage"></div>
@@ -74,6 +111,7 @@
     </div>
 
     <!-- JavaScript Section -->
-    <script src="/Online-monitoring/JS/online_monitoring_login.js"></script>
+    <script src="/Online-monitoring/JS/online_monitoring_login.js"></script> <!-- Your Existing JS -->
+    
 </body>
 </html>
