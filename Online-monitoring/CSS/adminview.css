@@ -1,0 +1,139 @@
+/* General Reset and Body Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+    line-height: 1.6;
+    background-image: url('/Online-monitoring/Images/adminbac.jpg'); /* Add background image */
+    background-size: cover;
+    background-position: center;
+}
+
+/* Container Styling */
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 30px auto;
+    padding: 20px;
+    background-color: rgba(255, 255, 255, 0.8); /* Slight white background with transparency for readability */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+    gap: 20px;
+}
+
+/* Header Styling */
+h1.page-title {
+    font-size: 36px;
+    font-weight: bold;
+    text-align: center;
+    color: #ffffff; /* Bright color for the title */
+    margin-bottom: 20px;
+    text-transform: uppercase;
+    background-color: #F31082; /* Background color for title */
+    padding: 10px;
+    border-radius: 5px;
+}
+
+/* Stream Container Styling */
+.stream-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0.9);
+    padding: 15px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+iframe {
+    width: 100%;
+    height: 200px;
+    border-radius: 8px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, 0.2);
+}
+
+.stream-title {
+    font-size: 18px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 10px;
+    text-align: center;
+}
+
+/* Button Styling */
+.whatsapp-button {
+    margin-top: 10px;
+    padding: 10px 15px;
+    background-color: #25D366;
+    color: white;
+    font-size: 14px;
+    font-weight: bold;
+    border: none;
+    border-radius: 5px;
+    text-decoration: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    text-align: center;
+    display: inline-block;
+}
+
+.whatsapp-button:hover {
+    background-color: #1da851;
+}
+
+/* Footer Styling */
+.footer {
+    text-align: center;
+    padding: 20px;
+    background-color: #f31082;
+    color: white;
+    margin-top: 50px;
+    border-radius: 8px;
+}
+
+.footer p {
+    font-size: 16px;
+}
+
+.footer a {
+    color: #ffffff;
+    text-decoration: none;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+    h1.page-title {
+        font-size: 28px;
+        padding: 8px; /* Slightly smaller padding for mobile */
+    }
+
+    iframe {
+        height: 200px;
+    }
+
+    .footer {
+        font-size: 14px;
+    }
+
+    .stream-container {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    iframe {
+        max-width: 100%;
+    }
+}
