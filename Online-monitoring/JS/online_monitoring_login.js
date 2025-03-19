@@ -25,7 +25,7 @@ const loginData = {
             { username: "KR013", password: "pass13ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
             { username: "KR014", password: "pass14ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
             { username: "KR015", password: "pass15ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },
-            
+            { username: "KR016", password: "pass16ko", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_Kolathur.html" },//New adm
         ],
     },
     tiruppur: {
