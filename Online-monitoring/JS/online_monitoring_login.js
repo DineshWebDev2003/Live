@@ -97,8 +97,14 @@ const loginData = {
             { username: "PI034", password: "pass34po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
             { username: "PI035", password: "pass35po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
             { username: "PI036", password: "pass36po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
+             { username: "PI037", password: "pass37po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
+             { username: "PI038", password: "pass38po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
+             { username: "PI039", password: "pass39po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
+             { username: "PI040", password: "pass40po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
+             { username: "PI041", password: "pass41po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
           //  { username: "PI037", password: "pass37po", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
            // { username: "demouser", password: "demouser1", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_pollachi.html" },
+            
         ],
     },
     coimbatore: {
