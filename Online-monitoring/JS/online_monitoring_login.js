@@ -132,7 +132,7 @@ const loginData = {
 
  chithode: {
         students: [
-            { username: "admin", password: "pass01", redirect: "/Online-monitoring/Camera_Access/Online-Monitoring_chithode.html" },
+            { username: "admin", password: "chithodeCHHK", redirect: "/Online-monitoring/Camera_Access/Online-Monitoring_chithode.html" },
             { username: "CH001", password: "pass01ch", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
             { username: "CH002", password: "pass02ch", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
             { username: "CH003", password: "pass03ch", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
