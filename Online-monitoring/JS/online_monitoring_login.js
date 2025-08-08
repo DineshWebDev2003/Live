@@ -127,6 +127,35 @@ const loginData = {
             { username: "CE015", password: "pass15co", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_coimbatore.html" },
         ],
     },
+
+
+
+ chithode: {
+        students: [
+            { username: "admin", password: "pass01", redirect: "/Online-monitoring/Camera_Access/Online-Monitoring_chithode.html" },
+            { username: "CH001", password: "pass01", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH002", password: "pass02", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH003", password: "pass03", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH004", password: "pass04", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH005", password: "pass05", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH006", password: "pass06", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH007", password: "pass07", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH008", password: "pass08", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH009", password: "pass09", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+            { username: "CH010", password: "pass10t", redirect: "/Online-monitoring/Camera_Access/Online_monitoring_chithode.html" },
+        ],
+    },
+
+
+
+
+
+
+
+
+
+
+    
 };
 
 // Login validation function
